@@ -1,0 +1,6 @@
+<h4><%= comentario.nome_usuario %> said:</h4>
+<%= simple_format comentario.texto %>
+Enviado em: <%=  formata_data(comentario.created_at)%> <br>
+Atualizado em: <%=  formata_data(comentario.updated_at)%>
+<br>
+<%= link_to "Deletar", [@post, comentario], method: :delete, confirm: "Você tem certeza?" %> |

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<%= will_paginate @posts%>
+<html>
+  <body>
+  <h1>POSTS</h1>
+      <% @posts.each do |post| %>
+        <article>
+        <p><h2><%= post.titulo %></h2></p>
+        <p>Criado em:<%= formata_data(post.created_at)%>
+        <p>Atualizado em:<%= formata_data(post.updated_at)%>
+        <p><%= post.conteudo %></p>    
+        <p><%= link_to 'Ver', :controller => "posts", :action => "show", :id => post %>
+           <%= link_to 'Editar', :controller => "posts", :action => "edit", :id => post %>
+           <%= link_to 'Deletar', post_path(post), :method => :delete, confirm: "Are you sure?"  %> 
+
+
+        </p>
+        </article>
+        </tr> 
+      <% end %>
+  <br>
+    <%= will_paginate @posts%>
+    <%= link_to 'Novo Post', :controller => "posts", :action => "new" %>
+  </body>
+</html>
