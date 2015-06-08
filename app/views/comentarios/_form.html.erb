@@ -1,13 +1,14 @@
 <%= form_for [@post, Comentario.new] do |f| %>
   <div>
-    <%= f.label :nome_usuario %><br />
+    <%= f.label :Nome %><br />
     <%= f.text_field :nome_usuario %>
   </div>
+  <br>
   <div>
-    <%= f.label :texto %><br />
+    <%= f.label :Comentário %><br />
     <%= f.text_area :texto %>
   </div>
   <div>
-    <%= f.submit "Enviar" %>
+    <%= f.submit "Enviar", :class => "btn btn-primary"%>
   </div>
 <% end %>

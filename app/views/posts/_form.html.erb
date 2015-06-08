@@ -5,7 +5,7 @@
 
       <ul>
       <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <%= message %>
       <% end %>
       </ul>
     </div>
@@ -20,6 +20,6 @@
     <%= f.text_area :conteudo %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar", :class => "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Titulo:</strong>
-  <%= @post.titulo %>
-</p>
-
-<p>
-  <strong>Conteudo:</strong>
-  <%= @post.conteudo %>
-</p>
+<div class="well">
+  <article>
+      <p><h2><%= @post.titulo %></h2></p>
+      <p>Criado em:<%= formata_data(@post.created_at)%></p>
+      <p>Atualizado em:<%= formata_data(@post.updated_at)%></p>
+      <p class="texto-post"><%= @post.conteudo %></p>    
+      </p>
+  </article>
+</div>
 
 <h2>Novo comentário</h2>
 <%= render "comentarios/form" %>
@@ -19,6 +17,8 @@
 <br>
 <br>
 <br>
-<%= link_to 'Voltar', :controller => "posts", :action => "index"%>
+<div class ="btn btn-default btn-lg active" >
+	<%= link_to 'Voltar', :controller => "posts", :action => "index"%>
+</div>
 
 
