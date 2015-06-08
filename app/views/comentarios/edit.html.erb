@@ -1,0 +1,14 @@
+<h1>editar</h1>
+<%= form_for [@post, @comentario] do |f| %>
+  <div>
+    <%= f.label :nome_usuario %><br />
+    <%= f.text_field :nome_usuario %>
+  </div>
+  <div>
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto %>
+  </div>
+  <div>
+    <%= f.submit "Atualizar" %>
+  </div>
+<% end %>

@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   delete "comentarios/:post_id/:comentario_id", to: "comentarios#destroy", as: :post_comentario
 
+  get "comentarios/:post_id/:comentario_id", to: "comentarios#edit", as: :edit_comentario
+
+  patch "comentarios/:post_id/:comentario_id", to: "comentarios#update", as: :update_comentario
+
   resources :posts do
     post "comentarios", to: "comentarios#create"
   end

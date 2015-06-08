@@ -4,3 +4,4 @@ Enviado em: <%=  formata_data(comentario.created_at)%> <br>
 Atualizado em: <%=  formata_data(comentario.updated_at)%>
 <br>
 <%= link_to "Deletar", [@post, comentario], method: :delete, confirm: "Você tem certeza?" %> |
+<%= link_to 'Editar',  edit_comentario_path(@post, comentario) %>
