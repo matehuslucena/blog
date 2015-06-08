@@ -1,5 +1,4 @@
 
-    <h1>POSTS</h1>
         <% @posts.each do |post| %>
         <div class="well">
           <article class="post-blog">
@@ -10,7 +9,7 @@
             <div class ="btn btn-info" >
               <%= link_to 'Ver', :controller => "posts", :action => "show", :id => post %>
             </div>
-            <div class ="btn btn-warning" >
+            <div class ="btn btn-info" >
                  <%= link_to 'Editar', :controller => "posts", :action => "edit", :id => post %>
             </div>
             <div class ="btn btn-danger" >
@@ -21,4 +20,6 @@
           </tr> 
         <% end %>
     <br>
-      <%= will_paginate @posts %>
+    
+      <%= will_paginate @posts, :class => "pager" %>
+  

@@ -18,11 +18,12 @@
 
 .brand{
 	font-size: 30px;
+	color: #C0C0C0;
 }
 
 #main{
 	.container{
-		position: absolute;
+		position: absolut;
 	}
 }
 
@@ -32,6 +33,25 @@
 
 .texto-post{
 	font-size: 18px;
+	text-align: justify;
+	margin: 20px 0;
+}
+
+.pager{
+	font-size: 20px;
+}
+
+.navbar{
+    height:100px;
+    margin-top:-60px;
+    padding: 20px;
+    position:relative;
+    background-color: rgb(51, 51, 51);
+}
+
+.nav{
+	padding: 10px;
+	allign: right;
 }
 
 
