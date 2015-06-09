@@ -1,25 +1,24 @@
 
-        <% @posts.each do |post| %>
-        <div class="well">
-          <article class="post-blog">
-            <p><h2><%= post.titulo %></h2></p>
-            <p>Criado em:<%= formata_data(post.created_at)%></p>
-            <p>Atualizado em:<%= formata_data(post.updated_at)%></p>
-            <p class="texto-post"><%= post.conteudo.truncate(50, omission: '... (continua)') %></p>
-            <div class ="btn btn-info" >
-              <%= link_to 'Ver', :controller => "posts", :action => "show", :id => post %>
-            </div>
-            <div class ="btn btn-info" >
-                 <%= link_to 'Editar', :controller => "posts", :action => "edit", :id => post %>
-            </div>
-            <div class ="btn btn-danger" >
-                 <%= link_to 'Deletar', post_path(post), :method => :delete, confirm: "Você tem certeza?"  %> 
-            </div>
-          </article>
-          </div>
-          </tr> 
-        <% end %>
-    <br>
-    
-      <%= will_paginate @posts, :class => "pager" %>
+<% @posts.each do |post| %>
+  <div class="well">
+    <article class="post-blog">
+      <p><h2><%= post.titulo %></h2></p>
+      <p>Criado em:<%= formata_data(post.created_at)%></p>
+      <p>Atualizado em:<%= formata_data(post.updated_at)%></p>
+      <p class="texto-post conteudo-post"><%=post.conteudo.truncate(50, omission: '... (continua)') %></p>
+      <div class ="btn btn-info" >
+        <%= link_to 'Ver', :controller => "posts", :action => "show", :id => post %>
+      </div>
+      <div class ="btn btn-info" >
+        <%= link_to 'Editar', :controller => "posts", :action => "edit", :id => post %>
+      </div>
+      <div class ="btn btn-danger" >
+        <%= link_to 'Deletar', post_path(post), :method => :delete, :data => {:confirm => 'Você tem certeza?'}  %> 
+      </div>
+    </article>
+  </div>
+<% end %>
+<br>
+
+<%= will_paginate @posts, :class => "pager" %>
   

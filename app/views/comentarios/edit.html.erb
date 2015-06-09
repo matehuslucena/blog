@@ -9,6 +9,13 @@
     <%= f.text_area :texto %>
   </div>
   <div>
-    <%= f.submit "Atualizar" %>
+   <div class="actions">
+    <%= f.submit "Atualizar", :class => "btn btn-primary"  %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class ="btn btn-default" >
+    <%= link_to 'Voltar', :controller => "posts", :action => "index"%>
   </div>
 <% end %>

@@ -31,12 +31,6 @@
 	margin-top: 20px;
 }
 
-.texto-post{
-	font-size: 18px;
-	text-align: justify;
-	margin: 20px 0;
-}
-
 .pager{
 	font-size: 20px;
 }
@@ -50,8 +44,15 @@
 }
 
 .nav{
-	padding: 10px;
+	margin-top: 10px;
 	allign: right;
 }
 
+.visible-lg{
+	font-size:18px;
+}
 
+.conteudo-post{
+	word-wrap: break-word;
+	font-size: 17px;
+}
