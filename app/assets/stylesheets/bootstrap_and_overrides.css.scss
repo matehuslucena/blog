@@ -4,3 +4,38 @@ body { padding-top: 60px; }
 .pager .next > a, .pager .next > span {
     float: none;
 }
+
+.brand{
+	font-size: 30px;
+	color: #C0C0C0;
+}
+
+.post-blog{
+	margin-top: 20px;
+}
+
+.pager{
+	font-size: 20px;
+}
+
+.navbar{
+    height:100px;
+    margin-top:-60px;
+    padding: 20px;
+    position:relative;
+    background-color: rgb(51, 51, 51);
+}
+
+.nav{
+	margin-top: 10px;
+	allign: right;
+}
+
+.visible-lg{
+	font-size:18px;
+}
+
+.conteudo-post{
+	word-wrap: break-word;
+	font-size: 17px;
+}
