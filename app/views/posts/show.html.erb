@@ -15,7 +15,7 @@
 <br>
 <br>
 <div class="pager">
-<%= will_paginate @post.comentarios.paginate :page => params[:page], :per_page => 10 %> 
+	<%= will_paginate @post.comentarios.paginate :page => params[:page], :per_page => 10 %> 
 </div>
 <div <div class="btn btn-default">
 	<%= link_to 'Voltar', :controller => "posts", :action => "index" %>
